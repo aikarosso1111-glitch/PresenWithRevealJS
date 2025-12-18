@@ -2,78 +2,79 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>犬の癒し効果</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>犬の癒し効果スライド</title>
 
   <!-- Reveal.js のCSS -->
   <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="dist/theme/white.css" id="theme">
 
-  <!-- プリント用PDFスタイル -->
-  <link rel="stylesheet" href="dist/reveal.css/print/pdf.css">
+  <!-- コードハイライト用 -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+  <style>
+    /* グラデーション背景用クラス */
+    .gradient-slide {
+      background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+      color: #003366; /* 文字色を濃いブルーに */
+    }
+  </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <!-- スライド開始 -->
-      <section>
+
+      <!-- タイトルスライド -->
+      <section class="gradient-slide">
         <h1>犬の癒し効果</h1>
         <p>心と体にやさしいパートナー</p>
       </section>
 
-      <section>
-        <h2>犬がもたらす癒しとは？</h2>
+      <!-- 科学的効果 -->
+      <section class="gradient-slide">
+        <h2>科学的に証明された効果</h2>
         <ul>
-          <li>ストレス軽減</li>
-          <li>孤独感の緩和</li>
-          <li>心拍数や血圧の安定</li>
-       </ul>
-      </section>
-
-      <section>
-        <h2>科学的根拠</h2>
-        <ul>
-          <li>ペットセラピー研究で証明</li>
-          <li>オキシトシン分泌の促進</li>
-          <li>不安障害やうつ症状の緩和</li>
+          <li>ストレスホルモンの減少</li>
+          <li>血圧の安定</li>
+          <li>幸福感の向上</li>
         </ul>
       </section>
 
-      <section>
-        <h2>日常生活での癒し</h2>
-        <ul>
-          <li>散歩によるリフレッシュ</li>
-          <li>触れ合いによる安心感</li>
-          <li>家族や友人との会話のきっかけ</li>
-        </ul>
+      <!-- 日常の癒し -->
+      <section class="gradient-slide">
+        <h2>日常での癒し</h2>
+        <p>散歩やふれあいを通じて、心が落ち着きます。</p>
       </section>
 
-      <section>
-        <h2>犬と暮らすメリット</h2>
-        <ul>
-          <li>規則正しい生活リズム</li>
-          <li>運動習慣の定着</li>
-          <li>社会的つながりの拡大</li>
-        </ul>
+      <!-- コード例（ハイライト付き） -->
+      <section class="gradient-slide">
+        <h2>HTMLコード例</h2>
+        <pre><code class="language-html" data-trim>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>犬の癒し効果</title>
+</head>
+<body>
+  <h1>犬の癒し効果</h1>
+</body>
+</html>
+        </code></pre>
       </section>
 
-      <section>
-        <h2>まとめ</h2>
-        <p>犬は心と体の健康を支える存在。<br>
-        科学的にも効果が裏付けられている。<br>
-        日常に癒しをもたらす大切なパートナー。</p>
-      </section>
-      <!-- スライド終了 -->
     </div>
   </div>
 
   <!-- Reveal.js のJS -->
   <script src="dist/reveal.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+
   <script>
     Reveal.initialize({
       hash: true,
       slideNumber: true,
-      plugins: [ RevealNotes ]
+      plugins: [ RevealHighlight, RevealNotes ]
     });
   </script>
 </body>
